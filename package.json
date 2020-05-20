@@ -1,0 +1,23 @@
+{
+  "name": "7hissbot",
+  "version": "0.0.1",
+  "description": "A Bot that showes you information about iss and some other cool stuff",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7h3730B/7hISSBot.git"
+  },
+  "author": "7h3730B",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/7h3730B/7hISSBot/issues"
+  },
+  "homepage": "https://github.com/7h3730B/7hISSBot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0"
+  }
+}
