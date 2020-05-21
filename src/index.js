@@ -23,6 +23,7 @@ const client = new Client({
 client.cmds = new Collection();
 client.messages = 0;
 client.cmdsExecuted = 0;
+client.capi = {};
 client.colors = {
     success: "00C412",
     error: "CE0000",
