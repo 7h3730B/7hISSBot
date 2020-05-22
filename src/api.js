@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 
 module.exports.pis = async (client) => {
+    console.log("Updated pis after: " + await client.msToTime(client.uptime) + " again");
     return await fetch("http://api.open-notify.org/astros.json")
         .then(response => response.json())
         .then(json => {
@@ -10,13 +11,10 @@ module.exports.pis = async (client) => {
 }
 
 module.exports.apod = async (client) => {
+    console.log("Updated apod after: " + await client.msToTime(client.uptime) + " again");
     return await fetch("https://api.nasa.gov/planetary/apod?api_key=" + process.env.NASA + "&hd=true")
         .then(response => response.json())
         .then(json => {
-            client.capi["apod"]["copyright"] = json["copyright"];
-            client.capi["apod"]["date"] = json["date"];
-            client.capi["apod"]["url"] = json["hdurl"] ? json["hdurl"] : json["url"];
-            client.capi["apod"]["explanation"] = json["explanation"];
-            client.capi["apod"]["title"] = json["title"];
+            client.capi["apod"] = json;
         });
 }

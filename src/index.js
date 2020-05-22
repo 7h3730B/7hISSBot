@@ -17,13 +17,25 @@ if (env.error) {
 }
 
 const client = new Client({
-    shards: "auto",
     disableMentions: "everyone"
 });
 client.cmds = new Collection();
 client.messages = 0;
 client.cmdsExecuted = 0;
 client.capi = {};
+client.msToTime = async (duration) => {
+    let seconds = Math.floor((duration / 1000) % 60);
+    let minutes = Math.floor((duration / (1000 * 60)) % 60);
+    let hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+    let days = Math.floor((duration / (1000 * 60 * 60 * 24)) % 24)
+
+    days = (days < 10) ? "0" + days : days;
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    return `${days} d ${hours} h ${minutes}min ${seconds} sec`
+}
 client.colors = {
     success: "00C412",
     error: "CE0000",

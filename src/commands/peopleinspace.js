@@ -13,6 +13,7 @@ module.exports.run = async (client, message, args) => {
 
     message.channel.send(await client.embed({
         title: "People in Space",
+        url: "http://open-notify.org/",
         description: "Currently there are " + client.capi["pis"]["number"] + " people in space",
         fields: [{
             name: "name and spacecraft",
