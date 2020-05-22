@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
             },
             {
                 name: "Invite",
-                value: `**https://discordapp.com/oauth2/authorize?client_id=514753712632233984&scope=bot&permissions=52288**`
+                value: `**https://discord.com/oauth2/authorize?client_id=514753712632233984&scope=bot&permissions=60480**`
             }
         ]
     }));

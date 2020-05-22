@@ -18,3 +18,21 @@ module.exports.apod = async (client) => {
             client.capi["apod"] = json;
         });
 }
+
+module.exports.epicn = async (client) => {
+    console.log("Updated epicn after: " + await client.msToTime(client.uptime) + " again");
+    return await fetch("https://api.nasa.gov/EPIC/api/natural?api_key=" + process.env.NASA)
+        .then(response => response.json())
+        .then(json => {
+            client.capi["epicn"] = json;
+        });
+}
+
+module.exports.epice = async (client) => {
+    console.log("Updated epice after: " + await client.msToTime(client.uptime) + " again");
+    return await fetch("https://api.nasa.gov/EPIC/api/enhanced?api_key=" + process.env.NASA)
+        .then(response => response.json())
+        .then(json => {
+            client.capi["epice"] = json;
+        });
+}

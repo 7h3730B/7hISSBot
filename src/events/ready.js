@@ -1,5 +1,5 @@
 const updatePresence = require("../updatePresence");
-const { pis, apod } = require("../api");
+const { pis, apod, epicn, epice } = require("../api");
 
 module.exports = async (client) => {
     console.log("----Bot ready----");
@@ -14,5 +14,13 @@ module.exports = async (client) => {
     await apod(client);
     setInterval(() => {
         apod(client)
+    }, 300000); // sends a Request every 5 Minutes = NASA API REQUEST per hour = 12 with start 13
+    await epicn(client);
+    setInterval(() => {
+        epicn(client)
+    }, 300000); // sends a Request every 5 Minutes = NASA API REQUEST per hour = 12 with start 13
+    await epice(client);
+    setInterval(() => {
+        epice(client)
     }, 300000); // sends a Request every 5 Minutes = NASA API REQUEST per hour = 12 with start 13
 };
