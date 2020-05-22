@@ -14,5 +14,5 @@ module.exports = async (client) => {
     await apod(client);
     setInterval(() => {
         apod(client)
-    }, 300000); // sends a Request every 5 Minutes = NASA API REQUEST per hour = 12
+    }, 300000); // sends a Request every 5 Minutes = NASA API REQUEST per hour = 12 with start 13
 };

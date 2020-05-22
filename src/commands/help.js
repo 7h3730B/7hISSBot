@@ -38,7 +38,7 @@ module.exports.run = async (client, message, args) => {
         }));
 
         let emb = await client.embed({
-            title: cmd.info.name + "Help Page",
+            title: cmd.info.name + "s Help Page",
             fields: [{
                 name: "description",
                 value: cmd.info.description
@@ -48,6 +48,7 @@ module.exports.run = async (client, message, args) => {
         if (cmd.info.aliases) emb.addField("aliases", cmd.info.aliases.join(','));
         if (cmd.info.usage) emb.addField("usage", process.env.PREFIX + " " + cmd.info.usage + "\n\`[] are optional arguments <> are needed arguments\`");
         if (cmd.info.example) emb.addField("example", process.env.PREFIX + " " + cmd.info.example);
+        if (cmd.info.explanation) emb.addField("explanation", cmd.info.explanation);
 
         message.channel.send(emb);
     }
