@@ -23,6 +23,41 @@ client.cmds = new Collection();
 client.messages = 0;
 client.cmdsExecuted = 0;
 client.capi = {};
+client.list = async (client, msg, title, entries, page, collector, listMsg) => {
+    entries[page].title = title + " " + (page + 1) + "/" + entries.length;
+    const embed = await client.embed(entries[page]);
+    if (listMsg) listMsg = await listMsg.edit(embed);
+    else listMsg = await msg.channel.send(embed);
+
+    collector = listMsg.createReactionCollector((reaction, user) => user.id === msg.author.id, {
+        max: 1,
+        idle: 20000
+    });
+
+    collector.on('collect', r => {
+        if (r.emoji.name == client.cemojis.first) {
+            if (page != 0) client.list(client, msg, title, entries, 0, collector, listMsg);
+        } else if (r.emoji.name == client.cemojis.back) {
+            if (page != 0) client.list(client, msg, title, entries, page - 1, collector, listMsg);
+        } else if (r.emoji.name == client.cemojis.next) {
+            if (page <= entries.length) client.list(client, msg, title, entries, page + 1, collector, listMsg);
+        } else if (r.emoji.name == client.cemojis.last) {
+            if (page <= entries.length) client.list(client, msg, title, entries, entries.length - 1, collector, listMsg);
+        } else if (r.emoji.name == client.cemojis.stop) collector.stop("Stop");
+    });
+
+    collector.on('end', (c, r) => {
+        listMsg.reactions.removeAll();
+        embed.setTitle(title);
+        listMsg.edit(embed);
+    });
+
+    await listMsg.react(client.cemojis.first);
+    await listMsg.react(client.cemojis.back);
+    await listMsg.react(client.cemojis.next);
+    await listMsg.react(client.cemojis.last);
+    await listMsg.react(client.cemojis.stop);
+};
 client.msToTime = async (duration) => {
     let seconds = Math.floor((duration / 1000) % 60);
     let minutes = Math.floor((duration / (1000 * 60)) % 60);
@@ -35,6 +70,13 @@ client.msToTime = async (duration) => {
     seconds = (seconds < 10) ? "0" + seconds : seconds;
 
     return `${days} d ${hours} h ${minutes}min ${seconds} sec`
+};
+client.cemojis = {
+    first: '⏪',
+    last: '⏩',
+    stop: '⏹',
+    back: '◀',
+    next: '▶'
 }
 client.colors = {
     success: "00C412",
