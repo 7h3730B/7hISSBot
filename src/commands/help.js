@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) => {
         }
         message.channel.send(await client.embed({
             title: "Help Embed",
-            description: "Commands:\n" + description
+            description: "**Commands:**\n" + description
         }))
     } else {
         const cmdName = args[0].toLowerCase();

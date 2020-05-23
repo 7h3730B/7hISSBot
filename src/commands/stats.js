@@ -1,7 +1,9 @@
 const {
-    version
+    version,
+    dependencies
 } = require("../../package");
 const si = require("systeminformation");
+const os = require("os");
 
 module.exports.info = {
     name: "stats",
@@ -9,9 +11,12 @@ module.exports.info = {
 };
 
 module.exports.run = async (client, message, args) => {
-    const mem = await si.mem();
     const cpu = await si.cpu();
     const cpuLoad = await si.currentLoad();
+    let dependend = "NodeJS Version: " + process.version + "\n";
+    Object.entries(dependencies).forEach((r) => {
+        dependend += `~ [${r[0]}](https://npmjs.org/package/${r[0]})${r[1]}\n`;
+    });
     message.channel.send(await client.embed({
         title: "Bot Stats",
         fields: [{
@@ -28,7 +33,11 @@ module.exports.run = async (client, message, args) => {
             },
             {
                 name: "System",
-                value: `Memory (binary): ${Math.round(mem.used / 1048576)} / ${Math.round(mem.total / 1048576)} MB\ncore(s): ${cpu.cores} at ${cpu.speed} GHz\nused: ${Math.round(cpuLoad.currentload, 4)} %`
+                value: `Memory (binary): ${((os.totalmem() - os.freemem()) / 1.074e+9).toFixed(2)}GiB / ${(os.totalmem() / 1.074e+9).toFixed(2)}GiB\ncore(s): ${cpu.cores} at ${cpu.speed} GHz\nused: ${Math.round(cpuLoad.currentload)} %`
+            },
+            {
+                name: "Dependencies",
+                value: dependend.substr(0,1000)
             }
         ]
     }));
