@@ -34,7 +34,7 @@ module.exports.run = async (client, message, args) => {
         if (!cmd) cmd = await client.cmds.find(cmd => cmd.info.aliases && cmd.info.aliases.includes(cmdName));
         if (!cmd) return message.channel.send(await client.embed({
             color: client.colors.error,
-            description: "Couldn't find that command"
+            description: "Couldn't find that command."
         }));
 
         let emb = await client.embed({
