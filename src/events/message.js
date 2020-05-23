@@ -3,9 +3,9 @@ module.exports = async (client, message) => {
 
     if (message.author == client.user.username || message.author.bot) return;
 
-    if (!message.content.startsWith(";iss")) return;
+    if (!message.content.startsWith(process.env.PREFIX)) return;
 
-    const args = message.content.slice(";iss".length).trim().split(/ +/);
+    const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/);
     const cmdName = args.shift().toLowerCase();
 
     let cmd = client.cmds.get(cmdName);
