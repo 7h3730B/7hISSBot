@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
             },
             {
                 name: "System",
-                value: `Memory (binary): ${Math.round(mem.used / 1048576)} / ${Math.round(mem.total / 1048576)} MB\ncores: ${cpu.cores} at ${cpu.speed} GHz\nused: ${Math.round(cpuLoad.currentload, 4)} %`
+                value: `Memory (binary): ${Math.round(mem.used / 1048576)} / ${Math.round(mem.total / 1048576)} MB\ncore(s): ${cpu.cores} at ${cpu.speed} GHz\nused: ${Math.round(cpuLoad.currentload, 4)} %`
             }
         ]
     }));
