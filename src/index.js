@@ -16,6 +16,19 @@ if (env.error) {
     process.exit(-1);
 }
 
+// Keep alive on glitch.com
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+    console.log(Date.now() + " Ping Received");
+    response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+    http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+
 const client = new Client({
     disableMentions: "everyone"
 });
@@ -115,7 +128,5 @@ client.on("info", e => console.info(e));
 client.on("warn", e => console.warn(e));
 client.on("error", e => console.error(e));
 process.on("uncaughtException", error => console.error(error));
-
-console.log(process.env.PROJECT_ID);
 
 client.login(process.env.TOKEN);
