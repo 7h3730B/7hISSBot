@@ -116,4 +116,6 @@ client.on("warn", e => console.warn(e));
 client.on("error", e => console.error(e));
 process.on("uncaughtException", error => console.error(error));
 
+console.log(process.env.PROJECT_ID);
+
 client.login(process.env.TOKEN);
