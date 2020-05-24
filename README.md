@@ -73,7 +73,7 @@ NASA=YOUR-NASA-API-TOKEN
 PREFIX=";iss"
 ```
 
-Now replace YOUR-DISCORD-TOKEN with your Discord API token of your bot, which you will get [here](https://discordapp.com/developers/applications) then replace YOUR-NASA-API-TOKEN with the API token you get from NASA [here](https://api.nasa.gov/) and if you really want you can replace the ; iss to your preferred Prefix.
+Now replace YOUR-DISCORD-TOKEN with your Discord API token of your bot, which you will get [here](https://discordapp.com/developers/applications) then replace YOUR-NASA-API-TOKEN with the API token you get from NASA [here](https://api.nasa.gov/) and if you really want you can replace the ;iss to your preferred Prefix.
 
 **Make sure there are no spaces befor and behind every =**
 
