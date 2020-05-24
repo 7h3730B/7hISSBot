@@ -2,7 +2,7 @@
     <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/pb.png" height="300" />
     <h1>~ 7hISSBot ~</h1>
     <strong>
-        A little Discord Bot showing you were the ISS currently is and other space related stuff.
+        A little Discord Bot showing you where the ISS currently is and other space related stuff.
     </strong><br/><br/>
     <img height="28" src="https://img.shields.io/github/license/7h3730B/7hISSBot?style=for-the-badge">
     <img height="28" src="https://img.shields.io/uptimerobot/status/m785018931-558bce40967c59691aa46a96?style=for-the-badge">
@@ -30,7 +30,7 @@ This is a little Discord Bot i made for me and my friends to show the current lo
 
 ## Features
 
-It has a hand full of commands + 3  
+It has a handful of commands + 3  
 <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/help_cmd.png">  
 7hISSBot can show you the current location of the ISS.  
 <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/iss_cmd.png">  
