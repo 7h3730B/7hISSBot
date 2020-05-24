@@ -19,10 +19,10 @@ module.exports.run = async (client, message, args) => {
             json['response'].forEach((d) => {
                 const date = new Date(d['risetime'] * 1000);
                 let split = date.toString().split(" ");
-                desc += "- " + date.toString().replace(split[2], split[1]).replace(split[1], split[2]).replace(split[split.length - 1], '') + "\n";
+                desc += "- " + date.toString().replace(split[2], split[1]).replace(split[1], split[2]).split("(")[0] + "\n";
             });
             client.embed({
-                title: "ISSs location",
+                title: "ISSs passtimes over the given location",
                 description: desc
             }).then(embed => message.channel.send(embed));
         });
