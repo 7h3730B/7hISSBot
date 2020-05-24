@@ -30,7 +30,7 @@ This is a little Discord Bot i made for me and my friends to show the current lo
 
 ## Features
 
-It has a hand full of commands + 3
+It has a hand full of commands + 3  
 <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/help_cmd.png">
 <br/><br/>
 7hISSBot can show you the current location of the ISS. 
