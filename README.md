@@ -6,7 +6,7 @@
     </strong><br/><br/>
     <img height="28" src="https://img.shields.io/github/license/7h3730B/7hISSBot?style=for-the-badge">
     <img height="28" src="https://img.shields.io/uptimerobot/status/m785018931-558bce40967c59691aa46a96?style=for-the-badge">
-    <a href="https://discord.com/oauth2/authorize?client_id=514753712632233984&scope=bot&permissions=60480"><img src="https://img.shields.io/badge/%20-INVITE-FFA726.svg?style=for-the-badge&logo=discord" height="30" /></a>
+    <a href="https://discord.com/oauth2/authorize?client_id=514753712632233984&scope=bot&permissions=60480"><img src="https://img.shields.io/badge/%20-INVITE-FFA726.svg?style=for-the-badge&logo=discord" height="28" /></a>
     <img height="28" src="https://img.shields.io/github/repo-size/7h3730B/7hISSBot?style=for-the-badge">
     <img height="28" src="https://img.shields.io/github/stars/7h3730B/7hISSBot?style=for-the-badge">
     <img height="28" src="https://forthebadge.com/images/badges/built-with-love.svg">
