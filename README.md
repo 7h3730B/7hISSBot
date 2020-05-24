@@ -75,7 +75,7 @@ PREFIX=";iss"
 
 Now replace YOUR-DISCORD-TOKEN with your Discord API token of your bot, which you will get [here](https://discordapp.com/developers/applications) then replace YOUR-NASA-API-TOKEN with the API token you get from NASA [here](https://api.nasa.gov/) and if you really want you can replace the ;iss to your preferred Prefix.
 
-**Make sure there are no spaces befor and behind every =**
+**Make sure there are no spaces before and behind every =**
 
 close your editor (in nano press STRG + O, hit enter to save and then press STRG + X to exit)
 
@@ -85,18 +85,19 @@ $ npm run start
 ``` 
 
 # Dependencies
-[discord.js](https://www.npmjs.com/package/discord.js) used to communicate with Discord
-[dotenv](https://www.npmjs.com/package/dotenv) used for parsing the .env file
-[express](https://www.npmjs.com/package/express) used to keep the Bot alive on [glitch.com](https://glitch.com/)
-[node-fetch](https://www.npmjs.com/package/node-fetch) used to send api requests
+- [discord.js](https://www.npmjs.com/package/discord.js) used to communicate with Discord
+- [dotenv](https://www.npmjs.com/package/dotenv) used for parsing the .env file
+- [express](https://www.npmjs.com/package/express) used to keep the Bot alive on [glitch.com](https://glitch.com/)
+- [node-fetch](https://www.npmjs.com/package/node-fetch) used to send api requests
 
 # Acknowledgments
 Thanks to:  
 - [NASA](https://www.nasa.gov/) for there amazing research and the [API](https://api.nasa.gov/) Endpoint
-- [natronics](https://github.com/natronics) for the open [open-notify/](http://open-notify.org/) API
-- [glitch](https://glitch.com/) for there free hosting
-- [uptimerobot](https://uptimerobot.com/) for there providing a free uptime tracker
+- [natronics](https://github.com/natronics) for the open [open-notify](http://open-notify.org/) API
+- [glitch](https://glitch.com/) for free hosting
+- [uptimerobot](https://uptimerobot.com/) for providing a free uptime tracker
 
 # License
 > You can check out the full license [here](https://github.com/7h3730B/7hISSBot/blob/master/LICENSE)  
+<br/>
 This project is licensed under the terms of the **MIT** license.
