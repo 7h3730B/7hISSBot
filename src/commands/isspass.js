@@ -10,7 +10,7 @@ module.exports.info = {
 };
 
 module.exports.run = async (client, message, args) => {
-    if (!args[0] && !args[1]) return message.channel.send(this.info.usage);
+    if (!args[0] || !args[1]) return message.channel.send(this.info.usage);
     fetch(`http://api.open-notify.org/iss-pass.json?lat=${args[0]}&lon=${args[1]}${args[2] ? ("&alt=" + args[2]) : ""}`)
         .then(rs => rs.json())
         .then(json => {
