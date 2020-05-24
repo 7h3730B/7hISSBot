@@ -1,6 +1,6 @@
 {
   "name": "7hissbot",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A Bot that showes you information about iss and some other cool stuff",
   "main": "src/index.js",
   "scripts": {
