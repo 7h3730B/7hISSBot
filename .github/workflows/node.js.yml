@@ -1,4 +1,4 @@
-name: Deploy to Github Pages automatically
+name: Deploy to glitch.com automatically
 
 on:
   push:
