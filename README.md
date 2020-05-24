@@ -93,7 +93,7 @@ $ npm run start
 # Acknowledgments
 Thanks to:  
 - [NASA](https://www.nasa.gov/) for there amazing research and the [API](https://api.nasa.gov/) Endpoint
-- [natronics](https://github.com/natronics) for the open [open-notify](http://open-notify.org/) API
+- [natronics](https://github.com/natronics) for the [open-notify](http://open-notify.org/) API
 - [glitch](https://glitch.com/) for free hosting
 - [uptimerobot](https://uptimerobot.com/) for providing a free uptime tracker
 
