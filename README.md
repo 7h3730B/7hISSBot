@@ -31,17 +31,13 @@ This is a little Discord Bot i made for me and my friends to show the current lo
 ## Features
 
 It has a hand full of commands + 3  
-<img src="https://raw.github.com/7h3730B/7hISSBot/master/images/help_cmd.png">
-<br/><br/>  
+<img src="https://raw.github.com/7h3730B/7hISSBot/master/images/help_cmd.png">  
 7hISSBot can show you the current location of the ISS.  
 <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/iss_cmd.png">  
-<br/><br/>  
 This Bot is able to calculate then the ISS passes over your location.   
 <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/isspass_cmd.png">  
-<br/><br/>  
-It can also show you the latest pictures from [EPIC](https://epic.gsfc.nasa.gov/)   
+test pictures from [EPIC](https://epic.gsfc.nasa.gov/)   
 <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/epic_cmd.gif">  
-<br/><br/>  
  
 ## Usage
 
