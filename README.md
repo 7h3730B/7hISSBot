@@ -48,3 +48,55 @@ You can selfhost 7hISSBot or just invite the official Bot.
 <a href="https://discord.com/oauth2/authorize?client_id=514753712632233984&scope=bot&permissions=60480"><img src="https://img.shields.io/badge/%20-INVITE-FFA726.svg?style=for-the-badge&logo=discord" height="30" /></a>
 
 #### selfhost
+
+Make sure you have [git](https://git-scm.com/) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com/)) installed. 
+From your command line:
+
+``` BASH
+# Clone this repository
+$ git clone https://github.com/7h3730B/7hISSBot.git
+# Go into the repository
+$ cd 7hISSBot
+# Install dependencies
+$ npm install
+# Make a .env file
+$ touch .env
+# open the .env file with any editor (here nano)
+$ nano .env
+```
+
+copy this into your .env file you opened:
+
+``` 
+TOKEN=YOUR-DISCORD-TOKEN
+NASA=YOUR-NASA-API-TOKEN
+PREFIX=";iss"
+```
+
+Now replace YOUR-DISCORD-TOKEN with your Discord API token of your bot, which you will get [here](https://discordapp.com/developers/applications) then replace YOUR-NASA-API-TOKEN with the API token you get from NASA [here](https://api.nasa.gov/) and if you really want you can replace the ; iss to your preferred Prefix.
+
+**Make sure there are no spaces befor and behind every =**
+
+close your editor (in nano press STRG + O, hit enter to save and then press STRG + X to exit)
+
+``` BASH
+# start the Bot
+$ npm run start
+``` 
+
+# Dependencies
+[discord.js](https://www.npmjs.com/package/discord.js) used to communicate with Discord
+[dotenv](https://www.npmjs.com/package/dotenv) used for parsing the .env file
+[express](https://www.npmjs.com/package/express) used to keep the Bot alive on [glitch.com](https://glitch.com/)
+[node-fetch](https://www.npmjs.com/package/node-fetch) used to send api requests
+
+# Acknowledgments
+Thanks to:  
+- [NASA](https://www.nasa.gov/) for there amazing research and the [API](https://api.nasa.gov/) Endpoint
+- [natronics](https://github.com/natronics) for the open [open-notify/](http://open-notify.org/) API
+- [glitch](https://glitch.com/) for there free hosting
+- [uptimerobot](https://uptimerobot.com/) for there providing a free uptime tracker
+
+# License
+> You can check out the full license [here](https://github.com/7h3730B/7hISSBot/blob/master/LICENSE)  
+This project is licensed under the terms of the **MIT** license.
