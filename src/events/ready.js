@@ -21,5 +21,5 @@ module.exports = async (client) => {
         apod(client);
         epicn(client);
         epice(client);
-    }, 3.6e+6); // sends a Request every 5 Minutes = NASA API REQUEST per hour = 12 with start 13
+    }, 300000); // sends a Request every 5 Minutes = NASA API REQUEST per hour = 12 with start 13
 };
