@@ -36,7 +36,7 @@ It has a handful of commands + 3
 <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/iss_cmd.png">  
 This Bot is able to calculate then the ISS passes over your location.   
 <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/isspass_cmd.png">  
-Shows you the [Astronomy Picture of the Day](http://apod.nasa.gov/apod/astropix.html)
+Shows you the [Astronomy Picture of the Day](http://apod.nasa.gov/apod/astropix.html)  
 <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/apod_cmd.png">  
  
 ## Usage
