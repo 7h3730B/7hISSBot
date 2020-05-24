@@ -10,18 +10,20 @@ module.exports.info = {
 };
 
 module.exports.run = async (client, message, args) => {
-    if (!args[1] && !args[2]) return message.channel.send(this.info.usage);
-    fetch(`http://api.open-notify.org/iss-pass.json?lat=${args[2]}&lon=${args[1]}${args[3] ? ("&alt=" + args[2]) : ""}`)
+    if (!args[0] && !args[1]) return message.channel.send(this.info.usage);
+    fetch(`http://api.open-notify.org/iss-pass.json?lat=${args[0]}&lon=${args[1]}${args[2] ? ("&alt=" + args[2]) : ""}`)
         .then(rs => rs.json())
         .then(json => {
-            console.log(json);
             if (json["message"] != "success") return message.channel.send("Something failed");
+            let desc = "";
+            json['response'].forEach((d) => {
+                const date = new Date(d['risetime'] * 1000);
+                let split = date.toString().split(" ");
+                desc += "- " + date.toString().replace(split[2], split[1]).replace(split[1], split[2]).replace(split[split.length - 1], '') + "\n";
+            });
             client.embed({
                 title: "ISSs location",
-                description: json['response'].forEach((d) => {
-                    const date = new Date(d['risetime'] * 1000);
-                    return date.toString();
-                })
-            }).then((embed) => message.channel.send(embed));
+                description: desc
+            }).then(embed => message.channel.send(embed));
         });
 };
