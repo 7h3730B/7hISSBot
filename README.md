@@ -11,9 +11,10 @@
     <img height="28" src="https://img.shields.io/github/stars/7h3730B/7hISSBot?style=for-the-badge">
     <img height="28" src="https://forthebadge.com/images/badges/built-with-love.svg">
 
-</div>
----
-## Table of Contents
+</div>  
+
+
+## Table of Contents  
 
 * [Intro](#intro) 
 * [Features](#features) 
