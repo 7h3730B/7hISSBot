@@ -12,7 +12,7 @@
     <img height="28" src="https://forthebadge.com/images/badges/built-with-love.svg">
 
 </div>
-
+---
 ## Table of Contents
 
 * [Intro](#intro) 
@@ -26,8 +26,9 @@
 ---
 ## Intro
 
-This is a little Discord Bot i made for me and my friends to show the current location of the ISS and stuff like the [Astronomy Picture of the Day](http://apod.nasa.gov/apod/astropix.html). It uses the [NASA API](https://api.nasa.gov/) and the [Open Notify API](http://open-notify.org/) to get its data. 
----
+This is a little Discord Bot i made for me and my friends to show the current location of the ISS and stuff like the [Astronomy Picture of the Day](http://apod.nasa.gov/apod/astropix.html). It uses the [NASA API](https://api.nasa.gov/) and the [Open Notify API](http://open-notify.org/) to get its data
+
+---  
 ## Features
 
 It has a handful of commands + 3  
