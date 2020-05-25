@@ -23,11 +23,11 @@
 * [Dependencies](#dependencies)
 * [Acknowledgments](#acknowledgments)
 * [License](#license)
-
+---
 ## Intro
 
 This is a little Discord Bot i made for me and my friends to show the current location of the ISS and stuff like the [Astronomy Picture of the Day](http://apod.nasa.gov/apod/astropix.html). It uses the [NASA API](https://api.nasa.gov/) and the [Open Notify API](http://open-notify.org/) to get its data. 
-
+---
 ## Features
 
 It has a handful of commands + 3  
@@ -38,7 +38,7 @@ This Bot is able to calculate then the ISS passes over your location.
 <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/isspass_cmd.png">  
 Shows you the [Astronomy Picture of the Day](http://apod.nasa.gov/apod/astropix.html)  
 <img src="https://raw.github.com/7h3730B/7hISSBot/master/images/apod_cmd.png">  
- 
+ ---
 ## Usage
 
 You can selfhost 7hISSBot or just invite the official Bot.
@@ -83,20 +83,20 @@ close your editor (in nano press STRG + O, hit enter to save and then press STRG
 # start the Bot
 $ npm run start
 ``` 
-
+---
 # Dependencies
 - [discord.js](https://www.npmjs.com/package/discord.js) used to communicate with Discord
 - [dotenv](https://www.npmjs.com/package/dotenv) used for parsing the .env file
 - [express](https://www.npmjs.com/package/express) used to keep the Bot alive on [glitch.com](https://glitch.com/)
 - [node-fetch](https://www.npmjs.com/package/node-fetch) used to send api requests
-
+---
 # Acknowledgments
 Thanks to:  
 - [NASA](https://www.nasa.gov/) for there amazing research and the [API](https://api.nasa.gov/) Endpoint
 - [natronics](https://github.com/natronics) for the [open-notify](http://open-notify.org/) API
 - [glitch](https://glitch.com/) for free hosting
 - [uptimerobot](https://uptimerobot.com/) for providing a free uptime tracker
-
+---
 # License
 > You can check out the full license [here](https://github.com/7h3730B/7hISSBot/blob/master/LICENSE)   
 This project is licensed under the terms of the **MIT** license.
